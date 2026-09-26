@@ -50,7 +50,7 @@ ACTION daclifyhub::versioning(name modulename, checksum256 codehash, checksum256
   _versions.emplace(get_self(), [&](auto& v) {
       v.version = id;
       v.codehash = codehash;
-      v.abihash = codehash;
+      v.abihash = abihash;
       v.json_src = json_src;
       v.info = info;
   });
